@@ -13,10 +13,15 @@ Built with **Expo / React Native** on the front end and a **Node.js, Express, an
   A side-by-side row reads best for a mobile app. Delete rows you don't have.
 -->
 
-| Discover | Session | Tricks |
-|:---:|:---:|:---:|
-| ![Discovery screen](./assets/discover.png) | ![Skate session](./assets/session.png) | ![Trick list](./assets/tricks.png) |
-| Browse parks, shops, and street spots across Ireland, filterable by county and feature. | Plan a multi-stop session, invite friends, and check in at each stop as you go. | Track progress through a shared trick library and build personal, shareable lists. |
+| Discover | Session |
+|:---:|:---:|
+| ![Discovery screen](./assets/discover.png) | ![Skate session](./assets/session.png) |
+| Browse parks, shops, and street spots across Ireland, filterable by county and feature. | Plan a multi-stop session, invite friends, and check in at each stop as you go. |
+
+| Location detail | Trick list |
+|:---:|:---:|
+| ![Location detail](./assets/detail.png) | ![Trick list](./assets/tricks.png) |
+| Each location shows photos, amenities, ratings, and live check-ins from the community. | Track progress through a shared trick library and build personal, shareable lists. |
 
 ## Architecture
 
