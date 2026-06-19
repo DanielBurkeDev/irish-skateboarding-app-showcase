@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 10; }
+      .title { font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .sub { font-size: 10.5px; fill: #64748b; }
+      .layerlabel { font-size: 11px; font-weight: 700; fill: #94a3b8; letter-spacing: 1px; }
+      .edge { stroke: #64748b; stroke-width: 1.5; fill: none; }
+      .edgelabel { font-size: 9.5px; fill: #94a3b8; }
+      .accent { fill: #f97316; }
+    </style>
+  </defs>
+
+  <!-- Client -->
+  <text x="40" y="44" class="layerlabel">CLIENT</text>
+  <rect x="40" y="56" width="170" height="62" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="60" y="84" class="title accent">Expo / React Native</text>
+  <text x="60" y="102" class="sub">Mobile app (iOS / Android)</text>
+
+  <!-- arrow client -> api -->
+  <path d="M210 87 L300 87" class="edge" marker-end="url(#arrow)"/>
+  <text x="218" y="78" class="edgelabel">HTTPS / JSON</text>
+
+  <!-- Auth (Clerk) top right -->
+  <text x="690" y="44" class="layerlabel">AUTH</text>
+  <rect x="690" y="56" width="150" height="62" rx="10" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="708" y="84" class="title">Clerk</text>
+  <text x="708" y="102" class="sub">Sessions + webhooks</text>
+
+  <!-- API server big container -->
+  <text x="300" y="44" class="layerlabel">API SERVER &#160;·&#160; Node.js + Express &#160;·&#160; Render</text>
+  <rect x="300" y="56" width="360" height="360" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- middleware layer -->
+  <rect x="322" y="78" width="316" height="58" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="338" y="102" class="title">Middleware</text>
+  <text x="338" y="120" class="sub">Helmet · Arcjet (rate limit) · Clerk auth · errors</text>
+
+  <!-- arrow auth -> middleware -->
+  <path d="M690 110 L640 110" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- routes -->
+  <rect x="322" y="150" width="150" height="56" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="338" y="173" class="title">Routes</text>
+  <text x="338" y="191" class="sub">/api/v1/* per resource</text>
+
+  <!-- controllers -->
+  <rect x="488" y="150" width="150" height="56" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="504" y="173" class="title">Controllers</text>
+  <text x="504" y="191" class="sub">Business logic</text>
+
+  <!-- arrow routes -> controllers -->
+  <path d="M472 178 L488 178" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- models -->
+  <rect x="322" y="220" width="316" height="54" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="338" y="243" class="title">Models</text>
+  <text x="338" y="261" class="sub">Mongoose schemas — parks, spots, shops, sessions, friends, tricks…</text>
+
+  <!-- arrow controllers -> models -->
+  <path d="M563 206 L563 220" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- admin -->
+  <rect x="322" y="288" width="150" height="56" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="338" y="311" class="title">AdminJS</text>
+  <text x="338" y="329" class="sub">Content dashboard</text>
+
+  <!-- health/webhooks -->
+  <rect x="488" y="288" width="150" height="56" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="504" y="311" class="title">Webhooks · Health</text>
+  <text x="504" y="329" class="sub">svix · /health</text>
+
+  <!-- arrow api -> database -->
+  <path d="M563 416 L563 452" class="edge" marker-end="url(#arrow)"/>
+  <text x="573" y="438" class="edgelabel">Mongoose</text>
+
+  <!-- Database -->
+  <text x="300" y="480" class="layerlabel">DATA</text>
+  <rect x="300" y="490" width="360" height="50" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="320" y="513" class="title">MongoDB</text>
+  <text x="320" y="530" class="sub">Atlas-hosted document store</text>
+
+  <!-- External services right column -->
+  <text x="690" y="160" class="layerlabel">SERVICES</text>
+  <rect x="690" y="172" width="150" height="44" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="708" y="199" class="title">Cloudinary</text>
+
+  <rect x="690" y="226" width="150" height="44" rx="9" class="box" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="708" y="253" class="title">Arcjet</text>
+
+  <!-- arrows to services -->
+  <path d="M638 194 L690 194" class="edge" marker-end="url(#arrow)"/>
+  <path d="M638 110 C 670 110, 660 248, 690 248" class="edge" marker-end="url(#arrow)"/>
+</svg>
