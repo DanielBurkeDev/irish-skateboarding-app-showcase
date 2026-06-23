@@ -2,7 +2,7 @@
 
 A social skateboarding app for the island of Ireland. Skaters discover skateparks, shops, and street spots near them, save favourites, rate and check in to locations, and plan multi-stop skate sessions they can share with friends. A built-in trick library lets users track their progress.
 
-Built with **Expo / React Native** on the front end and a **Node.js, Express, and MongoDB** backend, with Clerk authentication and a custom admin dashboard for content management. The app is deployed to production and actively maintained.
+Built with **Expo / React Native** on the front end and a **Node.js, Express, and MongoDB** backend, with Clerk authentication and a custom admin dashboard for content management. The backend API is deployed and running in production; the mobile app is in late-stage development, heading for the app stores soon.
 
 > This repository is a **public showcase**. The production source code is private and proprietary — I'm happy to walk through it on request. Get in touch via my [GitHub profile](https://github.com/DanielBurkeDev).
 
@@ -13,14 +13,14 @@ Built with **Expo / React Native** on the front end and a **Node.js, Express, an
   A side-by-side row reads best for a mobile app. Delete rows you don't have.
 -->
 
-| Discover | Session |
-|:---:|:---:|
-| ![Discovery screen](./assets/discover.png) | ![Skate session](./assets/session.png) |
+|                                        Discover                                         |                                     Session                                     |
+| :-------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+|                       ![Discovery screen](./assets/discover.png)                        |                     ![Skate session](./assets/session.png)                      |
 | Browse parks, shops, and street spots across Ireland, filterable by county and feature. | Plan a multi-stop session, invite friends, and check in at each stop as you go. |
 
-| Location detail | Trick list |
-|:---:|:---:|
-| ![Location detail](./assets/detail.png) | ![Trick list](./assets/tricks.png) |
+|                                    Location detail                                     |                                     Trick list                                     |
+| :------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+|                        ![Location detail](./assets/detail.png)                         |                         ![Trick list](./assets/tricks.png)                         |
 | Each location shows photos, amenities, ratings, and live check-ins from the community. | Track progress through a shared trick library and build personal, shareable lists. |
 
 ## Architecture
@@ -71,26 +71,26 @@ adminui/        # AdminJS resource definitions and custom dashboard
 
 ## Tech stack
 
-| Area | Technology |
-|------|-----------|
-| Client | Expo / React Native (iOS / Android) |
-| Runtime | Node.js (>=20), ES Modules |
-| Framework | Express 4 |
-| Database | MongoDB via Mongoose 8 |
-| Auth | Clerk |
-| Rate limiting | Arcjet |
-| Media | Cloudinary |
-| Admin UI | AdminJS |
-| Webhooks | svix (Clerk user sync) |
-| Security | Helmet |
-| Hosting | Render |
+| Area          | Technology                          |
+| ------------- | ----------------------------------- |
+| Client        | Expo / React Native (iOS / Android) |
+| Runtime       | Node.js (>=20), ES Modules          |
+| Framework     | Express 4                           |
+| Database      | MongoDB via Mongoose 8              |
+| Auth          | Clerk                               |
+| Rate limiting | Arcjet                              |
+| Media         | Cloudinary                          |
+| Admin UI      | AdminJS                             |
+| Webhooks      | svix (Clerk user sync)              |
+| Security      | Helmet                              |
+| Hosting       | Render                              |
 
 ## Scope
 
-This is a real, deployed product rather than a tutorial project: it serves a live mobile app, handles authentication and user data, and is built to be operated and maintained. It's an ongoing build, with subscription and additional moderation tooling among the next areas of work.
+This is a real, production-bound product rather than a tutorial project: the backend is deployed and running, handles authentication and user data, and is built to be operated and maintained. The mobile app is in late-stage development ahead of an app-store release. It's an ongoing build, with subscription and additional moderation tooling among the next areas of work.
 
 ## Contact
 
 Built by **Daniel Burke** — [github.com/DanielBurkeDev](https://github.com/DanielBurkeDev)
 
-*The production source code is private and proprietary. Access for review is available on request.*
+_The production source code is private and proprietary. Access for review is available on request._
